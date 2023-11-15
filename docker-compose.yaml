@@ -8,7 +8,7 @@ services:
     image: julioolv/desafio-fullcycle-app
     container_name: app
     tty: true
-    entrypoint: wait-for mysql:3306 -t 40 -- node index.js
+    entrypoint: wait-for mysql:3306 -t 40 -- ./start.sh
     volumes:
       - ./:/usr/src/app
     networks:
